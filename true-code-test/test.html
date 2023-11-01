@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Background and Blocks</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(blue, blue), linear-gradient(to right, #ffffff 50%, #0000ff 50%);
+      background-repeat: no-repeat;
+      background-size: 1000px 10px, 100% 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .block {
+      flex: 1 1 300px;
+      margin: 10px;
+      padding: 50px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .block {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="block">
+    <h2>Block 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam et augue ullamcorper.</p>
+  </div>
+  <div class="block">
+    <h2>Block 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam et augue ullamcorper.</p>
+  </div>
+</div>
+</body>
